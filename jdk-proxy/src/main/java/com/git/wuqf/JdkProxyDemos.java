@@ -9,7 +9,7 @@ import com.git.wuqf.subject.SubjectImpl;
  * author wuqf
  * date 2018/11/21
  */
-public class Main {
+public class JdkProxyDemos {
     public static void main(String[] args) {
         ISubject proxyInstance = (ISubject) new ProxyFactory(new SubjectImpl()).getProxyInstance();
         proxyInstance.doAction("xx");

@@ -11,6 +11,10 @@
         <module>cglib-proxy</module>
         <module>static-proxy</module>
     </modules>
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
     <artifactId>java-proxy-demos</artifactId>
 
 </project>
