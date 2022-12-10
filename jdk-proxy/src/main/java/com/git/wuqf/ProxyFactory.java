@@ -1,10 +1,10 @@
 package com.git.wuqf;
-/**
- *
- *代理工厂类，生成特定类的代理对象
-*/
+
 import java.lang.reflect.Proxy;
 
+/**
+ * 代理工厂类，生成特定类的代理对象
+ */
 public class ProxyFactory {
     private Object target;
 
@@ -12,10 +12,15 @@ public class ProxyFactory {
         this.target = target;
     }
 
+    /**
+     * the proxy factory is binded to proxy defination here.
+     *
+     * @return delegated object
+     */
     public Object getProxyInstance() {
-        return Proxy.newProxyInstance(HelloImpl.class.getClassLoader(),
-                HelloImpl.class.getInterfaces(),
-                new DynamicProxy(new HelloImpl()));
+        return Proxy.newProxyInstance(target.getClass().getClassLoader(),
+                target.getClass().getInterfaces(),
+                new DynamicProxy(target));
 
     }
 }

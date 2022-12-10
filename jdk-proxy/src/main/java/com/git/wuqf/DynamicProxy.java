@@ -7,7 +7,8 @@ import java.lang.reflect.Method;
  * author wuqf
  * date 2018/11/21
  * 动态代理，定义代码增强
- * 构建一个通用代理对象，该代理对象可以为其他方法提供特定代码增强 
+ * 构建一个通用代理对象，该代理对象可以为其他方法提供特定代码增强
+ * 一个通用代理对象可以代理多个被代理对象
  */
 public class DynamicProxy implements InvocationHandler {
 
