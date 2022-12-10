@@ -20,9 +20,9 @@ public class DynamicProxy implements InvocationHandler {
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        System.out.println("jdk invoke function start~~");
+        System.out.println(">> doWhatever start"); // 扩展进行额外的功能操作(如鉴权、计时、日志等)
         Object invoke = method.invoke(object,args);
-        System.out.println("jdk invoke function end~~");
+        System.out.println("doWhatever end <<");   // 扩展进行额外的功能操作(如鉴权、计时、日志等)
         return invoke;
     }
 }
